@@ -1,0 +1,121 @@
+.box{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    
+}
+
+.translate{
+    transition: transform 5s;
+
+}
+
+.translate:hover {
+    transform: translateX(100px) scale(1.5);
+}
+
+.rotate{
+
+    animation-name: spin;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+
+.move{
+position: absolute;
+
+top: 0px;
+left: 0px;
+
+background-color: green;
+
+animation-name: move;
+animation-duration: 4s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+
+}
+
+@keyframes move{
+    0% {
+        top: 0px;
+        left: 0px;
+        background-color: red;
+    }
+
+    25% {
+        top: 200px;
+        left: 0px;
+        background-color: green;
+    }
+
+    50% {
+        top: 200px;
+        left: 200px;
+        background-color: blue;
+
+    }
+
+    75% {
+        top: 0px;
+        left: 200px;
+        background-color: white;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        background-color: red;
+    }
+}
+
+.animate-in{
+    animation-name: animate-in;
+    animation-duration: 5s;
+}
+
+@keyframes animate-in{
+from{
+    transform: translateX(-110px);
+}
+to{
+    transform: translateX(0px);
+}
+}
+
+.container{
+    width: 800px;
+    height: 300px;
+    background-color: red;
+    margin: auto;
+}
+
+@media only screen and (max-width: 850px){
+    .container{
+        width: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 550px){
+    .container{
+        width: 300px;
+    }
+}
